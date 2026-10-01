@@ -69,18 +69,14 @@ randomPlay takes board b and player p
 # Make a random play for player p
 def randomPlay(b, p):
 	# 1. open_cols: get list of open column indices
-	#######open_cols = []
-	#######open_cols = openCols(b)
-	pass
+	open_cols = []
+	open_cols = openCols(b)
 	# 2. c: choose column index at random from open_cols
-	#######c = random.choice(open_cols)
-	pass
+	c = random.choice(open_cols)
 	# 3. r: call findRow(b,c) to get row index for that column
-	#######r = findRow(b, c)
-	pass
+	r = findRow(b, c)
 	# 4. b[r,c]: assign b[r,c] with player index p
-	#######b[r,c] = p
-	pass
+	b[r,c] = p
 	# 5. b: return the board
 	return b
 
@@ -102,14 +98,16 @@ def randomGame(b):
 	p = 1 # player 1 goes first
 	# continue to play until board is full
 	# replace True with stopping criterion using boardFull(b)
-	while not boardFull(b):
+	while True
+	
+	#not boardFull(b):
 		# make a random play
-		b = randomPlay(b, p)
+		#b = randomPlay(b, p)
 		# check for a win
-		if ckWin(b):
-			break
+		#if ckWin(b):
+		#	break
 		# toggle player
-		p = 2 if p == 1 else 1
+		#p = 2 if p == 1 else 1
 	# board is full
 	return b
 
